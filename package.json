@@ -1,7 +1,11 @@
 {
   "name": "express-celebrate",
+  "description": "Messing around with [**celebrate**](https://www.npmjs.com/package/celebrate), \"an express middleware function that wraps the joi validation library\".",
   "version": "1.0.0",
   "author": "Peter deHaan",
+  "bugs": {
+    "url": "https://github.com/pdehaan/express-celebrate/issues"
+  },
   "dependencies": {
     "body-parser": "^1.19.0",
     "celebrate": "^11.0.1",
@@ -11,10 +15,19 @@
     "eslint": "^6.8.0",
     "prettier": "^1.19.1"
   },
-  "keywords": ["express", "celebrate", "joi"],
+  "homepage": "https://github.com/pdehaan/express-celebrate#readme",
+  "keywords": [
+    "celebrate",
+    "express",
+    "joi"
+  ],
   "license": "MPL-2.0",
   "main": "index.js",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pdehaan/express-celebrate.git"
+  },
   "scripts": {
     "format": "prettier *.js routes/*.js --write",
     "lint": "eslint .",
