@@ -5,12 +5,15 @@ const {
   types: { number, string }
 } = require("../lib");
 
-const $schema = celebrate({
-  [QUERY]: {
-    name: string.default("stranger"),
-    age: number.integer()
-  }
-});
+const $schema = celebrate(
+  {
+    [QUERY]: {
+      name: string.default("stranger"),
+      age: number.integer()
+    }
+  },
+  { abortEarly: false }
+);
 
 const $router = router();
 $router.get("/", $schema, handler);

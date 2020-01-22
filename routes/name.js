@@ -5,11 +5,14 @@ const {
   types: { string }
 } = require("../lib");
 
-const $schema = celebrate({
-  [QUERY]: {
-    name: string.required()
-  }
-});
+const $schema = celebrate(
+  {
+    [QUERY]: {
+      name: string.required()
+    }
+  },
+  { abortEarly: false }
+);
 
 const $router = router();
 $router.get("/name", $schema, handler);
